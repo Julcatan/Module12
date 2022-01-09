@@ -83,7 +83,9 @@ console.log (sampleValues);
     //  so the otu_ids with the most bacteria are last. 
   
 
-    var yticks = resultArray.slice(0,10).map(sweetItem => {return otuIds.sort((a, b) => a.sampleValues - b.sampleValues.reverse())});
+    var yticks = otuIds.slice(0,10).map((a,b) => 
+      a.sampleValues - b.sampleValues).reverse();
+    
     console.log(yticks);
     
     
