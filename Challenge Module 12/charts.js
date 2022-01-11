@@ -79,7 +79,7 @@ function buildCharts(sample)
     
     //  5. Create a variable that holds the first sample in the array.
     var result = resultArray[0];
-console.log (result)
+//console.log (result)
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     otuIds = result.otu_ids;
 //console.log (otuIds);
@@ -92,7 +92,7 @@ console.log (result)
 //console.log (sampleValues);
 
 // 3. Create a variable that holds the washing frequency.
-washingFrequency =  resultMeta.wfreq;
+  washingFrequency =  resultMeta.wfreq;
 
 
 console.log(washingFrequency);
@@ -118,7 +118,8 @@ console.log(washingFrequency);
     // 9. Create the layout for the bar chart. 
     var barLayout = {
       title:'Top 10 Bacteria Cultures Found',
-                  
+      paper_bgcolor: "rgb(151, 161, 161)",
+      font: { color: "white", family: "Arial"}     
     };
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
@@ -134,7 +135,6 @@ console.log(washingFrequency);
   text: otuLabels,
   marker: {
     color: otuIds,
-    //opacity: [1, 0.8, 0.6, 0.4],
     size: sampleValues
   }}]
 
@@ -143,8 +143,9 @@ console.log(washingFrequency);
     var bubbleLayout = {
     title:  'Bacteria Cultures Per Sample', 
     showlegend: false,
-    hovermode: 'closest'
-    
+    hovermode: 'closest',
+    paper_bgcolor: "rgb(151, 161, 161)",
+    font: { color: "white", family: "Arial"}
      
     };
 
@@ -158,7 +159,7 @@ console.log(washingFrequency);
     mode: "gauge+number",
     value: washingFrequency,
     title: { text: '<b>Belly Button Washing Frequency</b> <br> Scrubs per week', font: { size: 22 } },
-    //delta: { reference: 400, increasing: { color: "RebeccaPurple" } },
+   
     gauge: {
       axis: { range: [null, 10], tickwidth: 1, tickcolor: "darkblue" },
       bar: { color: "darkblue" },
@@ -181,11 +182,11 @@ console.log(washingFrequency);
 
 // 5. Create the layout for the gauge chart.
 var gaugeLayout = { 
-  width: 500,
+  width: 400,
   height: 400,
   margin: { t: 25, r: 25, l: 25, b: 25 },
-  paper_bgcolor: "lavender",
-  font: { color: "darkblue", family: "Arial" }
+  paper_bgcolor: "rgb(151, 161, 161)",
+  font: { color: "white", family: "Arial" }
 };
 
 // 6. Use Plotly to plot the gauge data and layout.
