@@ -138,7 +138,7 @@ console.log(washingFrequency);
   marker: {
     color: otuIds,
     size: sampleValues,
- 
+    colorscale:'Earth',
   }}]
 
 
@@ -147,6 +147,7 @@ console.log(washingFrequency);
     title:  'Bacteria Cultures Per Sample', 
     showlegend: false,
     hovermode: 'closest',
+ 
     paper_bgcolor: "rgb(151, 161, 161)",
     font: { color: "white", family: "Arial"},
     xaxis: {title: "OTU IDS"} 
