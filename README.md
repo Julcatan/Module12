@@ -7,7 +7,7 @@ if one of the bacteria is found to be suitable to manufacture synthetic beef.
 ## Resources:
  - JavaScript
  - CSS
- - HTML
+ - HTML 
  - Plotly
  
 
