@@ -161,7 +161,7 @@ console.log(washingFrequency);
   {
     type: "indicator",
     mode: "gauge+number",
-    value: washingFrequency,
+    value: parseFloat(washingFrequency),
     title: { text: '<b>Belly Button Washing Frequency</b> <br> Scrubs per week', font: { size: 22 } },
    
     gauge: {
